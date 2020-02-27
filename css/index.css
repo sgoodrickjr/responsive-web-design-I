@@ -1,3 +1,4 @@
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -42,209 +43,208 @@ table {
 	border-spacing: 0;
 }
 
+/* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
 }
 
 html, body {
     height: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
-    font-size: 18px;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
     margin-bottom: 15px;
-    font-family: 'Rubik', sans-serif;
 }
 
-p {
-    line-height: 1.4;
+/* Your code starts here! */
+
+.logo {
+    margin-left: 40%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+}
+
+header nav a {
+    color: gray;
+        text-decoration: none;
+}
+
+/*nav.fixed-nav-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 50px;
+	background-color: green;
+	color: white
+  }
+*/
+
+
+
+section.call-to-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8% 0;
+	  }
+
+#innovate {
+display: inline-block;
+text-align: center;
+vertical-align: middle;
+width: 49%;
+}
+
+/* Heading */
+
+#title {
+text-align: center;
+font-size: 70px;
+}
+
+/* Button */
+
+#square{
+border-radius: 0px;
+height: 35px;
+width: 150px;
+}
+
+#square:hover {
+color: white;
+background-color: black;
+}
+
+/* sideImage */
+
+#sideImage{
+display: inline-block;
+vertical-align: middle;
+width: 49%;
+}
+
+
+/* Upper Section */
+
+.upperSection{
+	width: 100%;
+	vertical-align: middle;
+	text-align: left;
+}
+#feat, #about {
+	display: inline-block;
+	width: 47%;
+	margin-bottom: 25px;
+	margin-top: 20px;
+}
+
+ .middle-img {
+	text-align: center;
+	width: 100%;
+}
+/* Lower Section */
+
+ .lowerSection{
+width: 100%;
+vertical-align: middle;
+text-align: left;
+}
+#services, #product, #vison{
+	display: inline-block;
+	width: 32%;
+	margin-bottom: 25px;
+	margin-top: 20px;
+}
+
+/* Footer */
+
+#copyright {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 75px;
+} 
+
+/* Adaptive Layout */
 .container {
     width: 800px;
     margin: 0 auto;
-}
+ 
+  }
+  
+  @media(max-width: 800px) {
+      .container {
+          width: 800px;
+          background: white;
+      }
+  }
 
-nav {
-    padding-top: 4%;
-    padding-bottom: 5%;
-}
+  @media(max-width: 500px) {
+    .container {
+      width: 500px;
+      background: white;
+    }
+  
+    .container header nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
 
-a {
-    padding-left: 8%;
-    text-decoration: none;
-    color: black;
-}
+    }
 
-a:hover {
-    color: gray;
-}
+    .logo {
+        margin-left: 30%;
+    }
+  
+    .container header nav a {
+        display: flex;
+      flex-direction: column;
+      align-items: center;
+        color: gray;
+        text-decoration: none;
+        padding: 3%;
+        border-top: 1px solid lightgray;
+        width: 100%; 
 
+    }
 
-
-/*img.headerImage {
-    padding-bottom: 3%;
-}*/
-
-
-
-.top-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
-    border-bottom: 1px dashed black;
-    padding-top: 1%;
-}
-
-.top-content .text-container {
-    width: 48%;
-    padding: 0 1%;
-    padding-bottom: 20px;  
-}
-
-.middle-content {
-    margin-bottom: 20px;
-    border-bottom: 1px dashed black;
-}
-
-.middle-content h2 {
-    padding: 0 2%;
-    margin-bottom: 0;
-}
-
-.middle-content .boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.middle-content .boxes .box {
-    width: 12.5%;
-    height: 100px;
-    background: black;
-    margin: 20px 2.5%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#box1 {
-    background: teal;
-}
-
-#box2 {
-    background: gold;
-}
-
-#box3 {
-    background: cadetblue;
-}
-
-#box4 {
-    background: coral;
-}
-
-#box5 {
-    background: crimson;
-}
-
-#box6 {
-    background: forestgreen;
-}
-
-#box7 {
-    background: darkorchid;
-}
-
-#box8 {
-    background: hotpink;
-}
-
-#box9 {
-    background: indigo;
-}
-
-#box10 {
-    background: dodgerblue;
-}
+    #contact{
+        border-bottom: 1px solid lightgray;
+    }
+   
 
 
+    #feat, #about, #services, #product, #vision  {
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 10%;
+    }
 
-.bottom-content {
-    display: flex;
-    margin: 0 2% 20px;
-    justify-content: space-around;
-}
+    .middle-img {
+        margin-bottom: 5%;
+    }
 
-.bottom-content .text-container {
-    padding-right: 4%;
-}
+    .contact-us {
+        margin-top: 10%;
+    }
 
-.bottom-content .text-container:last-child {
-    padding-right: 0;
-}
-
-footer {
-    width: 100%;
-    background: black;
-}
-
-footer nav {
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 2%;
-    font-size: 14px;
-}
-
-footer nav a {
-    color: white;
-    text-decoration: none;
-}
-
-/* About Page */
-
-.overview {
-    
-    border-bottom: 2px dotted black;
-}
-
-h2 {
-    padding-top: 3%;
-}
-
-
-
-p {
-    padding-bottom: 3%;
-}
-
-#roundedButton {
-    border: 2px solid black;
-    font-size: 16px;
-    padding: 10px 20px;
-    margin: 4px 2px;
-    border-radius: 4px;
-}
-
-.offerings {
-    display: flex;
-}
-
-.strategy, .howWeWork, .placesWeWork, .collaboration{
-    padding-top: 7%;
-    padding-bottom: 5%;
-    border-bottom: 2px dotted black;
-}
-
-.firstTwo {
-    padding-right: 5%;
-}
-
-.closingSection {
-    padding: 3% 0;
-}
+  }
